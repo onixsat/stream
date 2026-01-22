@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+@font-face {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/russoone/v16/Z9XUDmZRWg6M1LvRYsHOy8mJrrg.woff2) format('woff2');
+unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/russoone/v16/Z9XUDmZRWg6M1LvRYsHOwcmJrrg.woff2) format('woff2');
+unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/russoone/v16/Z9XUDmZRWg6M1LvRYsHOz8mJ.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+svg {
+    font-family: 'Russo One', sans-serif;
+    /*position: absolute;
+    width: 200px;
+    height: 100px;
+	left: 5px;
+    top: 5px;*/
+}
+svg text {
+    text-transform: uppercase;
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #365fa0;
+    font-size: 290px;
+}
+@keyframes stroke {
+0% {
+fill: rgba(72,138,20,0);
+stroke: rgba(54,95,160,1);
+stroke-dashoffset: 25%;
+stroke-dasharray: 0 50%;
+stroke-width: 2;
+}
+70% {
+fill: rgba(72,138,20,0);
+stroke: rgba(54,95,160,1);
+}
+80% {
+fill: rgba(72,138,20,0);
+stroke: rgba(54,95,160,1);
+stroke-width: 3;
+}
+100% {
+fill: rgba(72,138,204,1);
+stroke: rgba(54,95,160,0);
+stroke-dashoffset: -25%;
+stroke-dasharray: 50% 0;
+stroke-width: 0;
+}
+}
+
+body {
+  /*  width: 100px;*/
+}
+#centerContainer {
+    width: 300px;
+}
+</style>
+</head>
+<body>
+<div id="centerContainer">
+  <svg viewBox="0 0 1320 1500">
+    <text x="50%" y="50%" dy="0.50em" text-anchor="middle"> ONIXSAT </text>
+  </svg>
+</div>
+</body>
+</html>

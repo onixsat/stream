@@ -1,0 +1,28 @@
+encpro.pt	3600	IN	SOA	mira.ns.cloudflare.com. dns.cloudflare.com. 2048076386 10000 2400 604800 3600
+
+;; NS Records
+encpro.pt.	86400	IN	NS	mira.ns.cloudflare.com.
+encpro.pt.	86400	IN	NS	rodney.ns.cloudflare.com.
+
+;; A Records
+encpro.pt.	1	IN	A	141.95.110.219
+mail.encpro.pt.	1	IN	A	141.95.110.219
+ns1.encpro.pt.	1	IN	A	135.125.183.142
+ns2.encpro.pt.	1	IN	A	135.125.183.142
+server.encpro.pt.	1	IN	A	135.125.183.142
+srv.encpro.pt.	1	IN	A	135.125.183.142
+
+;; NS Records
+encpro.pt.	1	IN	NS	ns2.encpro.pt.
+encpro.pt.	1	IN	NS	ns1.encpro.pt.
+
+;; PTR Records
+mail.encpro.pt.	1	IN	PTR	encpro.pt.
+
+;; TXT Records
+default._domainkey.encpro.pt.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApRMzfd9xj5uhr9mvGo84LlqxtLbnP8wPFgwq+7IAlpzvwah20qrlmudkLp5vfmCJJRlE4U0AhVibdq0SPOPU/JLpXaJvxwaSG7Q5wjk3gv4BUDAiWzmGqywScVEXdSQBY7eFh8WBT29rM002JJNrpyTgU6VVAs2T3cSzYJ3A4uDpXNufjzdzm4j51CvAgWyKh" "uCrtuJAWSL1qP34hXj92yDklmsL4kfSwxGTujCqtEUULm23S8dOf+iGOKBRa69uSb/vlSzAGw2suY56griROCI+T4IUcdD64VtfMP+DO+HJH3WAOglLOA+yl0vOYpPEFQM2bjiglvjH8MmPfCY+8wIDAQAB;"
+default._domainkey.srv.encpro.pt.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4fvTNBmPPrLXAJ5d06sZ4T5KHPGnZ6siJoakQWHgbceml/roKCt2/Z3VveQmgiE6nCQ8v/Gb4/OPeKQ5wsIn38kAJRRcmScHUSCt6Em/hh9MaBfCPrVNm2IEY5hhNiND4Tpy6GCSz8lf2Z9vq59kGT8rksfpK/Z9kyp0G2Qso7AaSrt4CbYFKXhbFHj3TAcym" "BtEcYYrErsNfd8oKMX7zLo21U8F7lbnjrrYBv/CxEDhkepLSkOlRgdDTVEU/E8e1HD7+C+Zbe3TbaWcBli2PoHciqMOY0FZbhrTPIBILpNQbB+rtI/HACdZQWqUWF5ONhYsMFMv/p++fliFtszWxQIDAQAB;"
+encpro.pt.	1	IN	TXT	"v=spf1 +mx +a +ip4:135.125.183.142 +ip4:141.95.110.219 ~all"
+ownercheck.srv.encpro.pt.	1	IN	TXT	"b1ba4032"
+srv.encpro.pt.	1	IN	TXT	"v=spf1 +mx +a +ip4:135.125.183.142 ~all"
+

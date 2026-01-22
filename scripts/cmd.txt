@@ -1,0 +1,99 @@
+    1  ip addr
+    2  hostname
+    3  ping 4.2.2.2
+    4  ifconfig
+    5  cd ..
+    6  cd etc/sysconfig/network-scripts/
+    7  ls
+    8  nano ifcfg-enp0s3 
+    9  ping 4.2.2.2
+   10  curl 192.168.1.97
+   11  yum install nano
+   12  yum install epel-release
+   13  yum install nginx -y 
+   14  systemctl enable nginx
+   15  yum install firewalld
+   16   yum install -y livecd-tools docker
+   17  cat /etc/centos-release
+   18  yum -y update && yum -y upgrade
+   19  curl -s -L https://www.alphagnu.com/upload/centos7-repo-fix.sh | bash
+   20  yum -y install epel-release
+   21    yum -y install make                  wget                  nano                  net-tools                 git                  livecd-tools                  curl                  docker                  parted                  kvm                  qemu-kvm                  libvirt                  python-requests                  git \
+   22    yum -y install wget
+   23  yum -y install nano
+   24    yum -y install net-tools
+   25    yum -y install git
+   26  yum install nginx -y 
+   27  systemctl enable nginx
+   28  yum install firewalld
+   29  systemctl start firewalld 
+   30  systemctl enable firewalld 
+   31  systemctl status firewalld
+   32  firewall-cmd --permanent --zone=public --add-service=ssh 
+   33  firewall-cmd --permanent --zone=public --add-service=http 
+   34  firewall-cmd --permanent --zone=public --add-service=https 
+   35  firewall-cmd --zone=public --add-port=3000/tcp --permanent 
+   36  firewall-cmd --zone=public --add-port=<your port here>/tcp --permanent 
+   37  firewall-cmd –reload 
+   38  firewall-cmd –-reload 
+   39  firewall-cmd reload 
+   40  firewall reload 
+   41  nano /etc/nginx/nginx.conf
+   42  nginx -t
+   43  systemctl enable --now nginx
+   44  systemctl start nginx
+   45  mkdir -p /var/www/default
+   46  yum install git
+   47  sudo yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y 
+   48  sudo yum install nodejs -y - setopt=nodesource-nodejs.module_hotfixes=1
+   49  yum update -y
+   50  sudo yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y 
+   51  sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
+   52  yum install gcc-c++ make
+   53  node -v
+   54  npm installsudo yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y 
+   55  sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
+   56  yum install gcc-c++ make
+   57  node -v
+   58  npm install
+   59  ip addr
+   60  whoami
+   61  yum update -y
+   62  hostname
+   63  nano /etc/hosts
+   64  sudo hostnamectl set-hostname onix.line.pm
+   65  nmcli d
+   66  curl www.google.com
+   67  ifconfig
+   68  curl 192.168.1.255
+   69  curl 192.168.1.97
+   70  hostname
+   71  nano /etc/hosts
+   72  curl onix.line.pm
+   73  nano /var/www/default/
+   74  cd /var/www/default/
+   75  ls
+   76  nano index.html
+   77  curl 192.168.1.97
+   78  curl onix.line.pm
+   79  ifconfig
+   80     ip addr show enp0s3 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+   81     sudo systemctl enable httpd.service
+   82  sudo yum install httpd
+   83  sudo systemctl start httpd
+   84  ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+   85     ip addr show enp0s3 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+   86  sudo systemctl enable httpd.service
+   87  sudo yum install php php-mysql
+   88  sudo systemctl restart httpd.service
+   89  sudo chown -R sammy.sammy /var/www/html/
+   90  sudo chown -R onix.onix /var/www/html/
+   91  nano /var/www/html/index.php
+   92  curl 192.168.1.97
+   93  hostnamectl set-hostname my.new-hostname.server
+   94  hostnamectl
+   95  nano /etc/hosts
+   96  hostnamectl
+   97  reboot
+   98  cd ../home/
+   99  history > cmd.txt

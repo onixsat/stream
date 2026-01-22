@@ -1,0 +1,41 @@
+# MySQL Root Password    : password
+# MySQL Postfix Password : G0YMj7XJOVN4pmxU
+# ZPanelX Username       : zadmin                            #
+# ZPanelX Password       : cg1Fyvfz2sASoCKv
+
+192.168.56.101 onix.line.pm
+
+udo yum -y update
+sudo yum -y install git
+which git
+git — version
+sudo yum -y install maven
+mvn -version
+sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum -y update
+sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+python3.6 -V
+ sudo yum -y update
+ sudo yum -y install epel-repo
+ sudo yum -y update
+ sudo yum -y install ansible
+ ansible — version
+ ansible — version
+
+
+
+sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+sudo yum -y install yum-utils
+sudo yum-config-manager --enable remi-php74
+sudo yum update
+sudo yum install php php-cli
+
+    Install additional packages:
+
+sudo yum install php-xxx
+
+Example:
+
+sudo yum install php  php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json
+

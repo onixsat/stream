@@ -1,0 +1,8 @@
+::1             localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+57.129.31.29            57-129-31-29.cprapid.com 57-129-31-29
+135.125.183.142         srv.encpro.pt srv             
+141.95.110.219          mail.encpro.pt mail
+127.0.0.1               localhost localhost.localdomain localhost4 localhost4.localdomain4
+127.0.0.1               localhost srv         
+127.0.0.1               localhost srv.encpro.pt srv

@@ -6,12 +6,12 @@
   <a id="readme-top"></a>
 </div>
 <details>
-  <summary>Menu de NevegaÃ§Ã£o</summary>
+  <summary>Menu de Nevegação</summary>
   <ol>
-    <li><a href="#INSTALAR">InstalaÃ§Ã£o</a></li>
+    <li><a href="#INSTALAR">Instalação</a></li>
     <li><a href="#PASSWORDS">Passwords</a></li>
     <li>
-      <a href="#CODIGOS">CÃ³digos</a>
+      <a href="#CODIGOS">Códigos</a>
       <ul>
         <li><a href="#BLOQUEAR">Bloquear</a></li>
         <li><a href="#OUTROS">Outros</a></li>
@@ -24,48 +24,48 @@
 
 <div id="INSTALAR">
 
-<h2 style="font-style:italic;">ðŸ› ï¸ InstalaÃ§Ã£o</h2>
+<h2 style="font-style:italic;">🛠️ Instalação</h2>
 <h6 style="font-style:italic;">Executar os comandos para instalar o sistema.</h6>
 
 ```bash
   sudo su
-  sudo yum update -y
-  sudo yum install -y git nano wget
+  sudo apt-get update -y
+  sudo apt-get install -y git nano wget
   git clone https://github.com/onixsat/stream.git
   cd stream
   bash btk.sh
  ```
 
 <sm style="font-style:italic;">
-  Ao iniciar vai criar o ficheiro de configuraÃ§Ã£o seguro em <a href="config/config.sh.enc">config/config.sh.enc</a>
+  Ao iniciar vai criar o ficheiro de configuração seguro em <a href="config/config.sh.enc">config/config.sh.enc</a>
   <br>
   Ao iniciar novamente digite a sua password para desencriptar o ficheiro seguro localmente e iniciar o programa.
   <br>
   
-  _Nota: O arquivo descodificado serÃ¡ eliminado da maquina local quando desligar o terminal._
+  _Nota: O arquivo descodificado será eliminado da maquina local quando desligar o terminal._
 
 </sm>
 
 </div>
 
 <details id="PASSWORDS">
-  <summary><h4 style="font-style:italic;">ðŸ“« Default Passwords</h4></summary>
+  <summary><h4 style="font-style:italic;">📫 Default Passwords</h4></summary>
 
-*Passwords padrÃ£o na configuraÃ§Ã£o do sistema.*
+*Passwords padrão na configuração do sistema.*
 
 <sub>[ [SSH](root) Username: $\textcolor{green}{\textsf{root}}\$ ]  $\textcolor{cyan}{\textsf{Password+2024}}$</sub>\
-<sup>[ [EncriptaÃ§Ã£o](root) $\textcolor{green}{\textsf{Sistema}}\$ ] $\textcolor{cyan}{\textsf{12345}}$</sup>
+<sup>[ [Encriptação](root) $\textcolor{green}{\textsf{Sistema}}\$ ] $\textcolor{cyan}{\textsf{12345}}$</sup>
 </details>
 
 <details id="CODIGOS">
-  <summary><h2 style="font-style:italic;">ðŸš€ CÃ³digos</h2></summary>
+  <summary><h2 style="font-style:italic;">🚀 Códigos</h2></summary>
 
-_CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
+_Códigos de script básicos para utilizaão na shell linux._
 
 <div id="BLOQUEAR">
 
 * __Bloquear__\
-  *Bloquear alteraÃ§Ã£o de ficheiros*
+  *Bloquear alteração de ficheiros*
 
   ```bash
   chattr -i /etc/mailips
@@ -80,7 +80,7 @@ _CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
 
 * __Outros__
   ```bash
-    banner "Apache" "ConfiguracÃ£o" "Password"
+    banner "Apache" "Configuracão" "Password"
     titulo "Atualizando o sistema..."
 
     declare -A myArray
@@ -115,9 +115,9 @@ _CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
 </details>
 
 <details id="OUTROS">
-  <summary><h2 style="font-style:italic;">ðŸ› ï¸ Outros</h2></summary>
+  <summary><h2 style="font-style:italic;">🛠️ Outros</h2></summary>
 
-_CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
+_Códigos de script básicos para utilizaão na shell linux._
 
 ---
 ## recursive WP file & folder permissions fix
@@ -241,7 +241,7 @@ A INPUT -m state --state NEW -m tcp -p tcp --match multiport --dports 80,443,330
 systemctl enable iptables
 systemctl restart iptables
 
-ðŸš€ðŸ› ï¸ðŸ“«
+🚀🛠️📫
 
 
 <a href="[link]">[link]</a>
@@ -256,5 +256,5 @@ Document in [MSON][].
   <h2 style="font-style:italic;">&ensp;&thinsp;</h2>
   <div align="right">( <a href="#readme-top">Voltar ao topo</a> )</div>
   
-_MIT licensed | Copyright Â© 2000-2024  [@onixsat](https://onixsat.pt), smartapi@protonmail.com_
+_MIT licensed | Copyright © 2000-2024  [@onixsat](https://onixsat.pt), smartapi@protonmail.com_
 </div>

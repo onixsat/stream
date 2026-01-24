@@ -78,7 +78,7 @@ function stop_spinner {
 menu=(
 "Update"
 "Password"
-"Config1"
+"Reload"
 "Process Stats"
 "Network Stats"
 "Disk Stats"
@@ -124,10 +124,10 @@ function show-menu {
 }
 
 function sub-menu {
-    if [[ "$1" == "menuCpanel" ]]; then
+    if [[ "$1" == "menuServidor" ]]; then
         echo "All is good ${1}"
 
-    elif [[ "$1" == "menuApache" ]]; then
+    elif [[ "$1" == "menuNginx" ]]; then
         while true; do
                           show-menu
                           read -rsn1 key
@@ -142,15 +142,15 @@ function sub-menu {
                                       # Main Code
                                       if [ "$line" == "Update" ]
                                       then
-                                        banner "Apache" "Configuracão" "Atualização"
+                                        banner "Nginx" "Configuracão" "Atualização"
                                           titulo "Atualizando o sistema..."
 
 
                                           function app0(){
 
                                             declare -A myArray
-                                              myArray[A]="yum update -y"
-                                              myArray[B]="yum upgrade -y"
+                                              myArray[A]="sudo apt-get update -y"
+                                              myArray[B]="sudo apt-get upgrade -y"
 
                                             dados=$(jstrings ' && ' "${myArray[@]}")
                                             #echo $dados >> update.txt
@@ -164,8 +164,8 @@ function sub-menu {
                                             start=$(date +%s%3N)
 
                                             start_loading "Atualizando..."
-                                            sudo yum update -y
-                                            sudo yum upgrade -y > /dev/null 2>&1
+                                            sudo apt-get update -y
+                                            sudo apt-get upgrade -y > /dev/null 2>&1
                                             stop_loading $?
 
                                             end=$(date +%s%3N)
@@ -181,7 +181,7 @@ function sub-menu {
 
                                       elif [ "$line" == "Password" ]
                                       then
-                                          banner "Apache" "Configuracão" "Password"
+                                          banner "Nginx" "Configuracão" "Password"
                                           titulo "Atualizando a password..."
 
                                           word=$(whiptail --title "Password root" --passwordbox "Nova password?" 10 60 "${password}" 3>&1 1>&2 2>&3)
@@ -195,29 +195,17 @@ function sub-menu {
                                           fi
 
 
-                                      elif [ "$line" == "Config1" ]
+                                      elif [ "$line" == "Reload" ]
                                       then
-                                        banner "Apache" "Configuracão" "Cnf1"
-                                          titulo "Stopping and disabling NetworkManager and disabling SELINUX."
+                                        banner "Nginx" "Configuracão" "Cnf1"
+                                          titulo "Reload nginx"
                                           declare -A myArray
-                                            myArray[A]="systemctl stop NetworkManager"
-                                            myArray[B]="disable NetworkManager"
+                                            myArray[A]="sudo nginx -t"
+                                            myArray[B]="sudo systemctl reload nginx"
                                           dados=$(jstrings ' && ' "${myArray[@]}")
-                                          #echo $dados >> cnf1.txt
-                                          esperar "$dados" "${WHITE}Atualizando..." "NetworkManager stopped and disabled"
-
-                                          declare -A myArray
-                                            NOW=$(date +"%m_%d_%Y-%H_%M_%S")
-                                            myArray[A]="cp /etc/selinux/config /etc/selinux/config.bckup.$NOW"
-                                            myArray[B]="sed -i -e 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config"
-                                            dados=$(jstrings ' && ' "${myArray[@]}")
-                                           #echo $dados >> cnf2.txt
-                                          esperar "$dados" "${WHITE}Atualizando..." "Selinux Disabled"
-
-                                          titulo "Enabling / Updating initial quotas! A reboot in the end will be required."
-                                          esperar "yes | /scripts/initquotas" "${WHITE}Habilitando" "Server quotas are enabled"
-
-
+                                          echo $dados >> cnf1.txt
+                                          esperar "$dados" "${WHITE}Atualizando..." "Nginx reloaded!"
+										  return 0
 
 
 

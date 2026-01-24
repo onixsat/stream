@@ -5,30 +5,16 @@ read -r -d '' ENV_VAR_MENU << EOM
   Menu ${BLUE}- ${BOLD}${RED}Servidor${NORMAL}
 EOM
 createMenu "menuServidor" "$ENV_VAR_MENU"
-addMenuItem "menuServidor" "Iniciar" showIniciar
-addMenuItem "menuServidor" "Instalar" showInstalar
+addMenuItem "menuServidor" "Iniciar" showInativo "Iniciar"
+addMenuItem "menuServidor" "Instalar" showInativo "Instalar"
 addMenuItem "menuServidor" "Configuracao" loadMenu "menuConfig"
 
 source menus/servidor/config.sh
 
-function showIniciar(){
-	banner "Servidor" "Configuracão" "Iniciar"
-echo ${domain}
-	if @confirm 'Confirma que quer atualizar?' ; then
-    source menus/servidor/iniciar.sh
-  else
-    echo "No"
-  fi
-
+function showInativo(){
+	banner "Servidor" "$1" "Inátivo"
+	esperar "sleep 2" "Verificando..." " ${WHITE} Esta opção está inátiva"
 	reload "return" "menuServidor"
 	pause
 }
 
-function showInstalar(){
-	banner "Servidor" "Configuracão" "Instalar"
-	echo "sem app"
-	#source scripts/iniciar.sh
-
-	reload "return" "menuServidor"
-	pause
-}

@@ -5,7 +5,6 @@ source "$thisFilePath/libs/pathUtils.sh"
 source "$thisFilePath/libs/functions.sh"
 
 proteger
-
 srcLibFile "menuUtils.sh"
 srcConfigFile "menus.sh"
 TRUE=0
@@ -18,6 +17,7 @@ function main() {
     keepGoing=$TRUE
     cd "$SCRIPT_DIR"
     init
+
     while keepGoing; do
         loadMenu "mainMenu" || l8r
     done

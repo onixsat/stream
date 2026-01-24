@@ -1,7 +1,10 @@
 #!/bin/bash
 HEADER_MSG="Bash Ubuntu"
 
-createMenu "mainMenu" "Main Menu"
+read -r -d '' ENV_VAR_MENU << EOM
+${RED}Main Menu${NORMAL}
+EOM
+createMenu "mainMenu" "$ENV_VAR_MENU"
 addMenuItem "mainMenu" "Servidor" loadMenu "menuServidor"
 addMenuItem "mainMenu" "Nginx" loadMenu "menuNginx"
 addMenuItem "mainMenu" "DNS" loadMenu "menuDns"

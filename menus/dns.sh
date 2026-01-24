@@ -11,12 +11,12 @@ addMenuItem "menuDns" "Procurar" showProcurar
 function showInstalar(){
 	banner "DNS" "Dominios" "Instalar"
 
-  sudo yum update
-  sudo yum -y install git
-  sudo yum -y install bind-utils
-  sudo yum -y install telnet
-  sudo yum -y install whois
-  sudo yum -y install nc
+  sudo apt-get update
+  sudo apt-get -y install git
+  sudo apt-get -y install bind-utils
+  sudo apt-get -y install telnet
+  sudo apt-get -y install whois
+  sudo apt-get -y install nc
 
 
 #  git clone https://github.com/yousafkhamza/dns-lookup-bash-script

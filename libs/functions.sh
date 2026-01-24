@@ -78,7 +78,7 @@ function loading_icon(){
     local load_interval="${1}"
     local loading_message="${2}"
     local elapsed=0
-    local loading_animation=( '—' "\\" '|' '/' )
+    local loading_animation=( '—' "\\" 'l' 'X' )
 
     echo -n "${WHITE}${loading_message} "
 
@@ -185,7 +185,7 @@ printf '%s' "${result:${#separator}}"
 
 function draw_spinner(){
     # shellcheck disable=SC1003
-    local -a marks=( '/' '-' '\' \'|' )
+    local -a marks=( '/' '-' '\' 'I' )
     local i=0
     delay=${SPINNER_DELAY:-0.25}
     message=${1:-}
@@ -194,6 +194,7 @@ function draw_spinner(){
         sleep "${delay}"
     done
 }
+
 function start_loading(){
     message=${1:-}                                # Set optional message
     draw_spinner "${message}" &                   # Start the Spinner:
@@ -251,7 +252,7 @@ function configs(){
 
 }
 function encrypt(){
-    # encrypt config/config.sh 12345 delete
+#     encrypt config/config.sh 12345 delete
     FILE=$1
     PASSPHRASE=$2
     SECURE_DELETE=$3
@@ -274,10 +275,10 @@ function encrypt(){
         # Optionally, overwrite multiple times for extra security
 
         # Remove the file
- #       rm -f "$FILE"
+       # rm -f "$FILE"
 
         if [ $? -eq 0 ]; then
-  #          echo "Original file securely deleted."
+            echo "Original file securely deleted."
         else
             echo "Failed to securely delete the original file."
             exit 1

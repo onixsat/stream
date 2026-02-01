@@ -1,4 +1,7 @@
 #!/bin/bash -x
+172.17.205.201
+172.17.205.201/
+172.17.205.201/login
 #curl --verbose http://172.17.205.201/login
 #curl --verbose -u user:password http://172.17.205.201/login
 #curl --verbose -u onix:onix http://172.17.205.201/login

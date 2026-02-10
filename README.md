@@ -116,7 +116,7 @@ _CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
 </details>
 
 <details id="OUTROS">
-  <summary><h2 style="font-style:italic;">ðŸ› ï¸ Outros</h2></summary>
+  <summary><h2 style="font-style:italic;">Outros</h2></summary>
 
 
 
@@ -125,9 +125,6 @@ _CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
 ---
 
 <div id="CMDS">
-
-* __Cmds__
-
 Primeiro
 
 ``` Iniciar

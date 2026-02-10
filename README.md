@@ -13,6 +13,7 @@
     <li>
       <a href="#CODIGOS">CÃ³digos</a>
       <ul>
+          <li><a href="#CMDS">Comandos</a></li>
         <li><a href="#BLOQUEAR">Bloquear</a></li>
         <li><a href="#OUTROS">Outros</a></li>
         <li><a href="#CARREGAR">Carregar</a></li>
@@ -117,9 +118,371 @@ _CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
 <details id="OUTROS">
   <summary><h2 style="font-style:italic;">ðŸ› ï¸ Outros</h2></summary>
 
-_CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
 
+
+
+_CÃ³digos de script bÃ¡sicos para utilizaÃ£o na shell linux._
 ---
+
+<div id="CMDS">
+
+* __Cmds__
+
+Primeiro
+
+``` Iniciar
+git clone https://github.com/onixsat/stream.git
+sudo apt-get update
+sudo apt-get install dos2unix
+cd ..
+dos2unix stream/*
+cd stream/
+bash btk.sh
+find -name '*.sh' -print0 | xargs -0 dos2unix
+nano libs/functions.sh
+nano btk.log
+nano btk.sh
+rm btk.log
+nano config/config.sh
+nano config/config.sh.enc
+nano config/menus.sh
+nano menus/servidor/config.sh
+cc
+ccc
+nano menus/servidor.sh
+rm menus/servidor/config.sh
+rm menus/servidor/iniciar.sh
+nano menus/dns.sh
+rm menus/dns.sh
+ls
+rm dns_2026-01-22.log
+nano oi
+rm oi
+clear
+rm menus/nginx.sh
+nano menus/nginx.sh
+rm config/submenus.sh
+nano config/submenus.sh
+nano cnf1.txt
+sudo nginx -t
+nginx -t
+sudo apt install nginx-full
+nano oi.php
+rm libs/functions.sh
+rm config/config.sh.enc
+nano config/
+rm cnf1.txt
+rm oi.php
+rm config/config.sh
+sudo apt-get install iptables-persistent
+sudo iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+localhost
+ping
+ping 0.0.0.0
+hostname
+sudo apt update
+sudo apt install nginx
+sudo ufw app list
+sudo ufw allow 'Nginx Full'
+sudo ufw enable
+sudo ufw status
+sudo apt-get purge --auto-remove ufw
+sudo apt-get install ufw
+hostname -I
+sudo nano /etc/nginx/sites-available/default
+sudo iptables -A PREROUTING -t nat -p tcp --dport 80 -j REDIRECT --to-port 8080
+sudo systemctl reload nginx
+sudo ufw allow 'Nginx HTTP'
+sudo ufw allow 'Nginx HTTPS'
+sudo systemctl restart nginx
+cd /etc/nginx/sites-available/
+cp default default2
+sudo cp default default2
+rm default
+sudo rm default
+nano default
+nano default2
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx -d DESKTOP-3D1ERD0
+sudo nano default
+nano /etc/hostname
+sudo nano /etc/hostname
+nano /etc/hosts
+ipconfig
+ifconfig
+sudo apt install net-tools
+sudo nano /etc/hosts
+sudo certbot --nginx -d srv.onixsat.online
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo apt install -y certbot python3-certbot-nginx
+sudo ufw delete allow 'Nginx HTTP'
+sudo certbot --nginx -d localhost
+sudo certbot --nginx
+sudo certbot certonly --nginx
+mkcert example.com
+mkcert -install
+apt-get install mkcert
+sudo apt-get install mkcert
+sudo mkcert example.com
+wget https://github.com/FiloSottile/mkcert/releases/download/v1.4.2/mkcert-v1.4.2-linux-amd64
+mv mkcert-v1.4.2-linux-amd64 mkcert
+chmod +x mkcert
+cp mkcert /usr/local/bin/
+sudo wget https://github.com/FiloSottile/mkcert/releases/download/v1.4.2/mkcert-v1.4.2-linux-amd64
+sudo mv mkcert-v1.4.2-linux-amd64 mkcert
+sudo cp mkcert /usr/local/bin/
+sudo mkcert -install
+a2enmod ssl
+sudo apt install apache2
+a2ensite default-ssl.conf
+sudo a2ensite default-ssl.conf
+sudo   systemctl reload apache2
+nano  /usr/local/share/ca-certificates/
+sudo update-ca-certificates
+nano /etc/letsencrypt/csr/0000_csr-certbot.pem
+nano /etc/letsencrypt/ssl-dhparams.pem
+sudo iptables -A PREROUTING -t nat -p tcp --dport 8080 -j REDIRECT --to-port 80
+quit
+exit
+printf "\e]66;s=2;Double sized text\a\n\n"
+printf "\e]66;s=3;Triple sized text\a\n\n\n"
+printf "\e]66;n=1:d=2;Half sized text\a\n
+printf "\e]66;n=1:d=2;Half sized text\a\n"
+print "\e]66;n=1:d=2;Half sized text\a\n"
+echo "\e]66;n=1:d=2;Half sized text\a\n"
+sgr0
+tput rev;   echo "This text has the reverse attribute";   tput sgr0
+banner "BIG TEXT"
+banner "ONIXSAT Pro"
+banner "ONIXSAT PRO"
+banner "ONIXSAT"
+banner "ONIXSAT ©"
+banner "ONIXSAT©"
+banner "ONIXSATbol ©"
+sudo
+sudo su
+SHELLCHECK_VERSION=$(curl -s "https://api.github.com/repos/koalaman/shellcheck/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+wget -qO shellcheck.tar.xz https://github.com/koalaman/shellcheck/releases/latest/download/shellcheck-v$SHELLCHECK_VERSION.linux.x86_64.tar.xz
+mkdir shellcheck-temp
+tar xf shellcheck.tar.xz --strip-components=1 -C shellcheck-temp
+sudo mv shellcheck-temp/shellcheck /usr/local/bin
+shellcheck --version
+rm -rf shellcheck.tar.xz shellcheck-temp
+nano test.sh
+shellcheck test.sh
+bash test.sh
+shellcheck btk.sh
+shellcheck config/menus.sh
+shellcheck config/menus.sh  -x
+shellcheck config/submenus.sh  -x
+shellcheck menus/nginx.sh
+bash -n btk.sh
+bash -n ./btk.sh
+shellcheck *.sh
+nano bash btk.sh
+rm test.sh
+nano file.log
+rm file.log
+nano  flog.lo
+rm flog.log
+nano log.log
+rm log.log
+rm log.log nna
+cd wsl
+cd home/
+cd onixsat/stream/
+localhost:
+nano ver.log
+rm btkrmkk
+rm btkl
+lc
+rm notify.log
+rm ver.log
+[A[B
+nano mmm.log
+password
+assw
+asswor
+nano a.sh
+bash a.sh
+sudo lsof -t -i tcp:8000 -s tcp:listen
+sudo lsof -t -i tcp:8089 -s tcp:listen
+sudo lsof -t -i tcp -s tcp:listen
+sudo lsof tcp:listen
+sudo lsof
+lsof
+lsof -i -sTCP:ESTABLISHED
+lsof -i -sTCP
+lsof -i -s TCP:ESTABLISHED
+lsof -i -s tcp:ESTABLISHED
+lsof -i -s tcp
+sudo lsof -nP -iTCP -sTCP:LISTEN
+lsof -nP -iTCP -sTCP:LISTEN
+sudo netstat -tunpl
+netstat -tunpl
+lsof -nP -iTCP -sTCP:LISTEN | sudo xargs kill
+lsof -nP -iTCP -sTCP:LISTEN | xargs kill
+lsof -t -i tcp:8000 -s tcp:listen | sudo xargs kill
+lsof -t -i tcp:8000 -s tcp:listen | xargs kill
+lsof -nP -iTCP -sTCP:LISTEN | KILL
+lsof -nP -iTCP -sTCP:LISTEN | xargs --no-run-if-empty kill -9
+lsof -nP -iTCP -sTCP:LISTEN | sudo xargs --no-run-if-empty kill -9
+lsof -nP -iTCP -sTCP:LISTEN | xargs kill -9
+lsof -t -nP -iTCP -sTCP:LISTEN | xargs kill -9
+lsof -t -nP -iTCP -sTCP:LISTEN
+nano v.sh
+bash v.sh
+nano b.sh
+bash b.sh
+nano m.sh
+bash m.sh
+nano c.sh
+bash c.sh
+nano o.sh
+bash o.sh
+git clone https://github.com/Adewagold/nginx-server-manager.git
+cd nginx-server-manager
+chmod +x install.sh
+./install.sh
+sudo./install.sh
+sudo install.sh
+sudo bash install.sh
+sudo ./install.sh
+su ./install.sh
+sudo bash ./install.sh
+python -v
+python3 -v
+python2 -v
+sudo systemctl start nginx-manager
+sudo apt install -y nginx python3 python3-pip python3-venv certbot python3-certbot-nginx
+sudo apt install -y nginx python3
+sudo apt install -y python3
+sudo install -y python3
+sudo apt-get install -y python3
+sudo apt-get install python3
+sudo apt-get install python
+python3
+sudo apt-get remove python3
+sudo apt-get remove python3.8
+sudo apt-get remove python
+ls /usr/bin/python*
+apt-get remove python3.8
+py -v
+sudo apt remove python3.12 -y
+sudo apt remove python3 -y
+sudo apt remove --purge python3 -y
+sudo killall apt apt-get
+sudo killall apt
+sudo killall python3
+sudo killall python
+sudo killall python3.8
+sudo killall python3.5
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock*
+sudo apt remove python3.8 -y
+sudo dpkg --configure -a
+sudo apt remove python2 -y
+sudo apt remove python -y
+sudo rm /var/lib/dpkg/lock
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+nano requirements.txt
+pip install 'pydantic&lt;2'
+pip install -U pydantic
+pip install -U pydantic-settings
+sudo chattr -i /etc/nginx/sites-available/lb.conf
+sudo chattr -i /etc/nginx/sites-available/bo.conf
+nano config.yaml
+sudo systemctl status nginx-manager
+sudo systemctl stop nginx-manager
+cd nginx-server-manager/
+wget https://gist.githubusercontent.com/Dryam/3cd2e55a19e1954f1433/raw/1ade54d8947afd2c875768b69b3b6ce19b66cf2b/nps_install.sh
+bash nps_install.sh
+nano nps_install.sh
+nano /usr/local/nginx/conf/nginx.conf
+nano /etc/nginx/nginx.conf
+nano /etc/nginx/sites-enabled/default
+nano /etc/nginx/sites-available/default
+nano /etc/nginx/
+npm install -g nginx-domain-assist
+git clone https://github.com/muthuishere/nginx-domain-assist.git
+cd nginx-domain-assist/
+nano /etc/apache2/sites-available/000-default.conf
+nano /var/www/html/index.html
+nano C:\Windows\System32\drivers\etc\hosts
+netsh interface portproxy show v4tov4
+wsl hostname -I
+nano /etc/resolv.conf
+sudo nano /etc/resolv.conf
+git clone https://gist.github.com/2166392.git
+sudo  certbot --nginx -d onixsat.online
+sudo nano /etc/nginx/nginx.conf
+systemctl restart nginx
+/usr/local/nginx/sbin/nginx -s  reload
+systemctl start nginx
+sudo systemctl start nginx
+sudo netstat -tulpn
+sudo fuser -k 80/tcp
+sudo fuser -k 443/tcp
+udo /etc/init.d/apache2 stop
+nginx -t -c /etc/nginx/nginx.conf
+systemctl stop apache2
+systemctl status apache2
+systemctl status nginx
+sudo killall nginx
+sudo killall apache2
+sudo killall apache
+nano /var/www/html/index.nginx-debian.html
+sudo nginx -s reload
+sudo ufw allow OpenSSH
+sudo apt install ufw
+sudo ufw allow ssh
+sudo ufw status numbered
+cp /etc/nginx/sites-enabled/default default
+rm /etc/nginx/sites-enabled/default
+localip=$(hostname  -I | cut -f1 -d' ')
+echo $localip
+nano /etc/nginx/sites-available/myproject.conf
+ln -s /etc/nginx/sites-available/myproject.conf /etc/nginx/sites-enabled/myproject.conf
+systemctl daemon-reload
+sudo systemctl daemon-reload
+cd /var/www/html/
+sudo service apache2 stop
+service nginx restart
+sudo fuser -k 8080/tcp
+sudo systemctl stop nginx
+sudo killall nginx-manager
+sudo killall httpd
+sudo killall http
+sudo killall tcp
+service nginx start
+nginx.service nginx start
+nginx.service start
+sudo service nginx start
+sudo service nginx stop
+nano /etc/nginx/sites-enabled/myproject.conf
+sudo rm /etc/nginx/nginx.conf
+apt-get purge nginx nginx-common nginx-full
+sudo dpkg-reconfigure nginx
+purge
+sudo apt-get purge nginx nginx-common nginx-full
+sudo apt-get install nginx
+sudo dpkg --force-confmiss -i /var/cache/apt/archives/nginx-common_*.deb
+apt-get update
+sudo install nginx
+rm -rf /etc/nginx
+```
+</div>
+-----------------------------------
+
+
+
+
 ## recursive WP file & folder permissions fix
 find /home/*/public_html -type d -exec chmod 755 {} \;\
 find /home/*/public_html -type f -exec chmod 644 {} \;

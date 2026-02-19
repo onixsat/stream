@@ -4,6 +4,12 @@ if [ $# -eq 0 ]; then
   echo "Please provide a username as an argument."
   exit 1
 fi
+sudo ufw enable
+sudo ufw allow ssh
+sudo ufw allow 22/tcp
+
+apt install make
+sudo apt install openssh-server -y
 
 username=$1
 
@@ -35,5 +41,5 @@ Match User $username
 EOL
 
 sudo systemctl restart ssh
-
+sudo systemctl restart sshd
 echo "SFTP user '$username' created with the provided password and separate directory."

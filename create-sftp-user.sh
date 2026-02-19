@@ -20,14 +20,14 @@ user_directory="$sftp_directory/$username"
 sudo mkdir -p "$user_directory"
 sudo chown root:root "$sftp_directory"
 sudo chown $username:$username "$user_directory"
-sudo chmod 755 "$sftp_directory"
-sudo chmod 700 "$user_directory"
+sudo chmod 777 "$sftp_directory"
+sudo chmod 777 "$user_directory"
 
 sudo tee -a /etc/ssh/sshd_config > /dev/null <<EOL
 Match User $username
 	ForceCommand internal-sftp
 	PasswordAuthentication yes
-	ChrootDirectory $sftp_directory
+	ChrootDirectory $user_directory
 	PermitTunnel no
 	AllowAgentForwarding no
 	AllowTcpForwarding no

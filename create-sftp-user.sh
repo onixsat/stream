@@ -27,7 +27,7 @@ sudo tee -a /etc/ssh/sshd_config > /dev/null <<EOL
 Match User $username
 	ForceCommand internal-sftp
 	PasswordAuthentication yes
-	ChrootDirectory $user_directory
+	ChrootDirectory $sftp_directory
 	PermitTunnel no
 	AllowAgentForwarding no
 	AllowTcpForwarding no
